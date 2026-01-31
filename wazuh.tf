@@ -5,7 +5,7 @@
 
 locals {
   wazuh_host_config_dir = var.wazuh_host_config_dir
-  wazuh_certs_dir       = var.wazuh_certs_dir
+  #wazuh_certs_dir       = var.wazuh_certs_dir
 
   dashboard_yml_host_path = "${var.wazuh_dashboard_config_dir}/opensearch_dashboards.yml"
   certs_yml_host_path     = "${local.wazuh_host_config_dir}/certs.yml"
