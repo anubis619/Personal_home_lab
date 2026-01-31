@@ -1,0 +1,17 @@
+# Terraform local cache
+.terraform/
+.terraform.lock.hcl
+
+# Terraform state (NEVER commit)
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Variables with secrets (don't commit)
+#terraform.tfvars
+
+# Editor/OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
