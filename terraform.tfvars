@@ -18,7 +18,7 @@ ensure_chown = true
 
 
 # Dashboards
-homepage_port       = 3001
+homepage_port       = 3000
 homepage_config_dir = "/srv/homepage/config"
 
 homarr_port     = 7575
@@ -35,3 +35,5 @@ wazuh_manager_api_port  = 55000
 wazuh_indexer_port      = 9200
 wazuh_manager_data_dir  = "/srv/wazuh/manager"
 wazuh_indexer_data_dir  = "/srv/wazuh/indexer"
+wazuh_dashboard_config_dir = "/srv/wazuh/dashboard/config"
+homarr_secret_encryption_key = "a1088a6b45ad30a77d9e18bf1169117e3acd299a03c2d424064d2df19f8cb03e"
