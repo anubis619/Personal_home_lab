@@ -8,7 +8,7 @@
 crash.log
 
 # Variables with secrets (don't commit)
-#terraform.tfvars
+terraform.tfvars
 
 # Editor/OS noise
 .vscode/
