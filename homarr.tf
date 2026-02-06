@@ -10,10 +10,10 @@ resource "docker_container" "homarr" {
   image   = docker_image.homarr.image_id
   restart = "unless-stopped"
 
-env = [
-  "TZ=${var.tz}",
-  "SECRET_ENCRYPTION_KEY=${var.homarr_secret_encryption_key}",
-]
+  env = [
+    "TZ=${var.tz}",
+    "SECRET_ENCRYPTION_KEY=${var.homarr_secret_encryption_key}",
+  ]
 
   ports {
     internal = 7575
@@ -27,7 +27,7 @@ env = [
     type   = "bind"
   }
 
-    # ✅ enable Docker integration
+  # ✅ enable Docker integration
   mounts {
     target = "/var/run/docker.sock"
     source = "/var/run/docker.sock"

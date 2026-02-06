@@ -12,6 +12,9 @@ locals {
     var.radarr_config_dir,
     var.sonarr_config_dir,
     var.qbittorrent_config_dir,
+    var.prowlarr_config_dir,
+    var.uptimekuma_data_dir,
+    var.portainer_data_dir,
 
     # Media mounts
     var.movies_dir,
@@ -35,7 +38,7 @@ resource "null_resource" "ensure_paths" {
 
   provisioner "local-exec" {
     interpreter = ["/bin/bash", "-c"]
-    command = <<-EOT
+    command     = <<-EOT
       set -euo pipefail
 
       echo "[bootstrap] Creating required directories..."

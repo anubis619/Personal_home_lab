@@ -16,7 +16,6 @@ downloads_dir = "/mnt/mydrive/Downloads"
 
 ensure_chown = true
 
-
 # Dashboards
 homepage_port       = 3000
 homepage_config_dir = "/srv/homepage/config"
@@ -24,16 +23,22 @@ homepage_config_dir = "/srv/homepage/config"
 homarr_port     = 7575
 homarr_data_dir = "/srv/homarr/data"
 
-grafana_port          = 3002
-grafana_data_dir      = "/srv/grafana/data"
-grafana_admin_user    = "admin"
+# DO NOT change after first run
+homarr_secret_encryption_key = "REDACTED"
+
+grafana_port           = 3002
+grafana_data_dir       = "/srv/grafana/data"
+grafana_admin_user     = "admin"
 grafana_admin_password = "ChangeMeNow123!"
 
-# Wazuh
-wazuh_dashboard_port    = 5601
-wazuh_manager_api_port  = 55000
-wazuh_indexer_port      = 9200
-wazuh_manager_data_dir  = "/srv/wazuh/manager"
-wazuh_indexer_data_dir  = "/srv/wazuh/indexer"
-wazuh_dashboard_config_dir = "/srv/wazuh/dashboard/config"
-homarr_secret_encryption_key = "REDACTED"
+prowlarr_config_dir = "/srv/prowlarr/config"
+prowlarr_port       = 9696
+
+uptimekuma_data_dir = "/srv/uptimekuma/data"
+uptimekuma_port     = 3001
+
+portainer_data_dir = "/srv/portainer/data"
+portainer_port     = 9443
+
+portainer_enable_edge_tunnel = false
+portainer_edge_tunnel_port   = 8000
