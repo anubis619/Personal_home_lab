@@ -224,3 +224,78 @@ variable "grafana_admin_password" {
   default     = "admin"
   sensitive   = true
 }
+
+# Prowlarr
+variable "prowlarr_port" {
+  type    = number
+  default = 9696
+}
+
+variable "prowlarr_config_dir" {
+  type = string
+}
+
+# Uptime Kuma
+variable "uptimekuma_port" {
+  type    = number
+  default = 3001
+}
+
+variable "uptimekuma_data_dir" {
+  type = string
+}
+
+# Portainer
+variable "portainer_port" {
+  type    = number
+  default = 9443
+}
+
+variable "portainer_data_dir" {
+  type = string
+}
+
+variable "portainer_enable_edge_tunnel" {
+  type    = bool
+  default = false
+}
+
+variable "portainer_edge_tunnel_port" {
+  type    = number
+  default = 8000
+}
+
+
+variable "beszel_port" {
+  type    = number
+  default = 8090
+}
+
+variable "beszel_data_dir" {
+  type = string
+}
+
+variable "beszel_socket_dir" {
+  type = string
+}
+
+variable "beszel_deploy_agent" {
+  type    = bool
+  default = false
+}
+
+variable "beszel_agent_data_dir" {
+  type = string
+}
+
+variable "beszel_agent_token" {
+  type      = string
+  sensitive = true
+  default   = ""
+}
+
+variable "beszel_agent_key" {
+  type      = string
+  sensitive = true
+  default   = ""
+}
