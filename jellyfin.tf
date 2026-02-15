@@ -16,7 +16,9 @@ resource "docker_container" "jellyfin" {
     "PGID=${var.pgid}",
     "TZ=${var.tz}",
     "NVIDIA_VISIBLE_DEVICES=all",
-    "NVIDIA_DRIVER_CAPABILITIES=compute,video,utility"
+    "NVIDIA_DRIVER_CAPABILITIES=compute,video,utility",
+    "JELLYFIN_PublishedServerUrl=https://jellyfin.inam.io"
+
   ]
 
   ports {

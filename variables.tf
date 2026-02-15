@@ -299,3 +299,92 @@ variable "beszel_agent_key" {
   sensitive = true
   default   = ""
 }
+
+############################
+# Pi-hole macvlan
+############################
+
+variable "lan_interface" {
+  type        = string
+  description = "Host LAN interface (e.g. enp6s0)"
+}
+
+variable "lan_subnet" {
+  type        = string
+  description = "LAN subnet (e.g. 192.168.1.0/24)"
+}
+
+variable "lan_gateway" {
+  type        = string
+  description = "LAN gateway (e.g. 192.168.1.1)"
+}
+
+variable "pihole_lan_ip" {
+  type        = string
+  description = "Static LAN IP for Pi-hole (e.g. 192.168.1.53)"
+}
+
+variable "pihole_image" {
+  description = "Pi-hole image."
+  type        = string
+  default     = "pihole/pihole:latest"
+}
+
+variable "pihole_data_dir" {
+  description = "Host directory for Pi-hole persistence."
+  type        = string
+  default     = "/srv/pihole"
+}
+
+variable "pihole_webpassword" {
+  description = "Pi-hole web UI password."
+  type        = string
+  sensitive   = true
+}
+
+variable "pihole_dns1" {
+  description = "Upstream DNS 1."
+  type        = string
+  default     = "1.1.1.1"
+}
+
+variable "pihole_dns2" {
+  description = "Upstream DNS 2."
+  type        = string
+  default     = "8.8.8.8"
+}
+
+
+############################
+# Nginx Proxy Manager
+############################
+
+variable "npm_image" {
+  description = "Nginx Proxy Manager image."
+  type        = string
+  default     = "jc21/nginx-proxy-manager:latest"
+}
+
+variable "npm_data_dir" {
+  description = "Host dir for NPM persistence."
+  type        = string
+  default     = "/srv/nginx-proxy-manager"
+}
+
+variable "npm_http_port" {
+  description = "Host port for HTTP."
+  type        = number
+  default     = 80
+}
+
+variable "npm_https_port" {
+  description = "Host port for HTTPS."
+  type        = number
+  default     = 443
+}
+
+variable "npm_admin_port" {
+  description = "Host port for NPM admin UI."
+  type        = number
+  default     = 81
+}

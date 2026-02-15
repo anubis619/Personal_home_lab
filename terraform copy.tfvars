@@ -42,3 +42,4 @@ portainer_port     = 9443
 
 portainer_enable_edge_tunnel = false
 portainer_edge_tunnel_port   = 8000
+PIHOLE_WEBPASSWORD           = "ChangeMeNow123!"

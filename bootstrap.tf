@@ -16,6 +16,11 @@ locals {
     var.uptimekuma_data_dir,
     var.portainer_data_dir,
 
+    # Pi-hole + NPM
+    var.pihole_data_dir,
+    var.npm_data_dir,
+
+
     # Media mounts
     var.movies_dir,
     var.tv_dir,
